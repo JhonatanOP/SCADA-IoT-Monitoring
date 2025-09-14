@@ -2,11 +2,11 @@
 
 ## Description
 
-This project demonstrates how to build a **remote monitoring system** that collects data from environmental and mechanical sensors and delivers it to operators through a dashboard.  The system uses a small **IoT gateway** (such as a Raspberry Pi or ESP32) to acquire sensor readings for **temperature, humidity and vibration**, transfers the data to a **SCADA/IoT platform**, stores it in a time‑series database and visualises it with a dashboard.  By integrating sensors into a SCADA system, operators gain **real‑time performance monitoring, historical data analysis and centralized control**【624404881786730†L75-L82】, enabling them to detect anomalies, predict maintenance needs and optimise the process.
+This project demonstrates how to build a **remote monitoring system** that collects data from environmental and mechanical sensors and delivers it to operators through a dashboard.  The system uses a small **IoT gateway** (such as a Raspberry Pi or ESP32) to acquire sensor readings for **temperature, humidity and vibration**, transfers the data to a **SCADA/IoT platform**, stores it in a time‑series database and visualises it with a dashboard.  By integrating sensors into a SCADA system, operators gain **real‑time performance monitoring, historical data analysis and centralized control**, enabling them to detect anomalies, predict maintenance needs and optimise the process.
 
 ### Why SCADA/IoT?
 
-SCADA (Supervisory Control and Data Acquisition) systems provide remote monitoring and control for industrial plants.  They gather data from devices (inverters, meters, sensors, etc.), visualise it on a central interface and offer **real‑time monitoring, event/failure recording, remote access and historical analysis**【624404881786730†L75-L82】.  Modern IoT dashboards serve a similar role: they **transform, display and organise data from network‑connected devices** so it can be read at a glance and analysed over time【128370494818392†L123-L131】.  Integrating IoT sensors with PLC controls and SCADA dashboards allows manufacturers to **monitor critical parameters in real time, optimise production and meet regulatory requirements with minimal manual intervention**【817530033999772†L123-L131】.
+SCADA (Supervisory Control and Data Acquisition) systems provide remote monitoring and control for industrial plants.  They gather data from devices (inverters, meters, sensors, etc.), visualise it on a central interface and offer **real‑time monitoring, event/failure recording, remote access and historical analysis**. Modern IoT dashboards serve a similar role: they **transform, display and organise data from network‑connected devices** so it can be read at a glance and analysed over time. Integrating IoT sensors with PLC controls and SCADA dashboards allows manufacturers to **monitor critical parameters in real time, optimise production and meet regulatory requirements with minimal manual intervention**.
 
 ## Topology
 
@@ -41,15 +41,15 @@ The diagram below illustrates the overall architecture.  Multiple sensors connec
 ### 3. Visualisation with a dashboard
 
 1. **Connect Grafana to InfluxDB.**  In Grafana, add an InfluxDB data source pointing to your database.  Create a dashboard and panels for each parameter.
-2. **Build charts and gauges.**  Use line charts to plot temperature, humidity and vibration over time.  Add gauge panels to show current values and define thresholds (e.g. high vibration).  According to SparkFun’s guide, an IoT dashboard **transforms, displays and organises data** so operators can monitor historical and real‑time data at a glance【128370494818392†L123-L131】.
-3. **Configure alerts.**  Set alert rules in Grafana to trigger notifications (email, Slack, etc.) when values exceed acceptable limits (e.g. temperature > 30°C or vibration above a threshold).  SCADA systems support **alarm thresholds and remote management**【624404881786730†L71-L83】.
+2. **Build charts and gauges.**  Use line charts to plot temperature, humidity and vibration over time.  Add gauge panels to show current values and define thresholds (e.g. high vibration).  According to SparkFun’s guide, an IoT dashboard **transforms, displays and organises data** so operators can monitor historical and real‑time data at a glance.
+3. **Configure alerts.**  Set alert rules in Grafana to trigger notifications (email, Slack, etc.) when values exceed acceptable limits (e.g. temperature > 30°C or vibration above a threshold).  SCADA systems support **alarm thresholds and remote management**.
 
 ### 4. Decision support
 
 Real‑time and historical data empower operators to make informed decisions:
 
-- **Predictive maintenance:** Vibration sensors integrated with PLC/SCADA enable detection of equipment wear.  When combined with dashboards and alerts, maintenance can be scheduled before a failure occurs【817530033999772†L123-L131】.
-- **Process optimisation:** Continuous monitoring of temperature and humidity helps maintain product quality and energy efficiency.  IoT sensors integrated with SCADA can **optimise production and meet regulatory requirements**【817530033999772†L123-L131】.
+- **Predictive maintenance:** Vibration sensors integrated with PLC/SCADA enable detection of equipment wear.  When combined with dashboards and alerts, maintenance can be scheduled before a failure occurs.
+- **Process optimisation:** Continuous monitoring of temperature and humidity helps maintain product quality and energy efficiency.  IoT sensors integrated with SCADA can **optimise production and meet regulatory requirements**.
 - **Event analysis:** Historical data stored in InfluxDB allows post‑incident analysis, helping engineers identify root causes and improve system design.
 
 ## Next Steps
